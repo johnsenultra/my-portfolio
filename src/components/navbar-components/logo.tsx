@@ -1,13 +1,14 @@
 import myLogo from "../../assets/johnsen2.png";
 
 type LogoProps = {
-  size?: number;
+  width?: number;
+  height?: number;
 };
 
-export default function Logo({ size = 44 }: LogoProps) {
+export default function Logo({ width = 70, height = 80 }: LogoProps) {
   return (
     <div>
-      <img src={myLogo} alt="Logo" width={size} height={size} />
+      <img src={myLogo} alt="Logo" width={width} height={height} />
     </div>
   );
 }
