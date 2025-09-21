@@ -11,21 +11,26 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { Link } from "react-router-dom";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
-  { href: "#", label: "Home", active: true },
-  { href: "#", label: "Features" },
-  { href: "#", label: "Pricing" },
-  { href: "#", label: "About" },
+  { href: "/", label: "Home", active: true },
+  { href: "/about", label: "About Me" },
+  { href: "#", label: "Skills" },
 ];
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 px-4 md:px-6">
-      <div className="mx-auto flex h-16 max-w-screen-lg justify-between gap-4 bg-transparent">
+    <header className="sticky top-0 z-50 pe-4 md:px-6">
+      <div className="mx-auto flex h-16 max-w-screen-lg justify-between bg-transparent">
         {/* Left side */}
+        <div className="flex items-center">
+          <Link to="/" className="text-primary hover:text-primary/90">
+            <Logo />
+          </Link>
+        </div>
         <div className="flex gap-2">
-          <div className="flex items-center border-10 md:hidden">
+          <div className="flex items-center md:hidden">
             {/* Mobile menu trigger */}
             <Popover>
               <PopoverTrigger asChild>
@@ -60,18 +65,16 @@ export default function Navbar() {
               <PopoverContent
                 align="end"
                 sideOffset={8}
-                className="mx-4 border-2 border-dotted p-1 md:hidden"
+                className="mx-4 p-1 md:hidden"
               >
-                <NavigationMenu className="max-w-none border-5 border-dotted *:w-full">
+                <NavigationMenu className="max-w-none *:w-full">
                   <NavigationMenuList className="flex-col items-end gap-0 md:gap-2">
                     {navigationLinks.map((link, index) => (
                       <NavigationMenuItem key={index} className="w-full">
-                        <NavigationMenuLink
-                          href={link.href}
-                          className="py-1.5"
-                          active={link.active}
-                        >
-                          {link.label}
+                        <NavigationMenuLink asChild>
+                          <Link to={link.href} className="py-1.5">
+                            {link.label}
+                          </Link>
                         </NavigationMenuLink>
                       </NavigationMenuItem>
                     ))}
@@ -80,24 +83,20 @@ export default function Navbar() {
               </PopoverContent>
             </Popover>
           </div>
-          {/* Main nav */}
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-primary hover:text-primary/90">
-              <Logo />
-            </a>
-          </div>
         </div>
 
         {/* Navigation menu right side */}
-        <NavigationMenu className="ml-auto h-full *:h-full max-md:hidden">
-          <NavigationMenuList className="h-full gap-2">
+        <NavigationMenu className="max-md:hidden">
+          <NavigationMenuList className="gap-5">
             {navigationLinks.map((link, index) => (
-              <NavigationMenuItem key={index} className="h-full">
-                <NavigationMenuLink
-                  href={link.href}
-                  className="text-muted-foreground hover:text-primary border-b-primary hover:border-b-primary data-[active]:border-b-primary h-full justify-center rounded-none border-y-2 border-transparent py-1.5 font-medium hover:bg-transparent data-[active]:bg-transparent!"
-                >
-                  {link.label}
+              <NavigationMenuItem key={index}>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to={link.href}
+                    className="text-muted-foreground hover:text-primary py-1.5 font-medium"
+                  >
+                    {link.label}
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
