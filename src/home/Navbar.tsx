@@ -24,12 +24,20 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 pe-4 md:px-6">
       <div className="mx-auto flex h-16 max-w-screen-lg justify-between bg-transparent">
         {/* Left side */}
-        <div className="flex items-center">
+        <div
+          className="flex items-center"
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
           <Link to="/" className="text-primary hover:text-primary/90">
             <Logo />
           </Link>
         </div>
-        <div className="flex gap-2">
+        <div
+          className="flex gap-2"
+          data-aos="fade-left"
+          data-aos-duration="600"
+        >
           <div className="flex items-center md:hidden">
             {/* Mobile menu trigger */}
             <Popover>
@@ -86,7 +94,11 @@ export default function Navbar() {
         </div>
 
         {/* Navigation menu right side */}
-        <NavigationMenu className="max-md:hidden">
+        <NavigationMenu
+          className="max-md:hidden"
+          data-aos="fade-left"
+          data-aos-duration="600"
+        >
           <NavigationMenuList className="gap-5">
             {navigationLinks.map((link, index) => (
               <NavigationMenuItem key={index}>
