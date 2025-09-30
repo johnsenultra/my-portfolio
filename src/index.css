@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* font */
+body {
+  font-family: "Inter Variable", sans-serif;
+}
+
+.hero-text {
+  font-family: "Cormorant Garamond Variable", serif;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
