@@ -21,8 +21,8 @@ const navigationLinks = [
 ];
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 pe-4 md:px-6">
-      <div className="mx-auto flex h-16 max-w-screen-lg justify-between bg-transparent">
+    <header className="sticky top-0 z-50 bg-white/80 pe-4 backdrop-blur-lg md:px-6 dark:bg-[#0a0a0a]/80">
+      <div className="mx-auto flex h-16 max-w-screen-lg justify-between">
         {/* Left side */}
         <div
           className="flex items-center"

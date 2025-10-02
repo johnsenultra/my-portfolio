@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 
 export default function LetsConnect() {
   return (
-    <section className="">
+    <section className="" data-aos="fade-up" data-aos-duration="800">
       <div className="mx-auto flex max-w-screen-lg flex-col items-center justify-center gap-4 px-5 py-20 text-center">
         <h2 className="text-2xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
           Let’s Connect

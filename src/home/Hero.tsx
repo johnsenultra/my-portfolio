@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div
-      className="h-full w-full bg-gradient-to-t from-[#c9ffac] to-white dark:from-[#111111] dark:to-[#0a0a0a]"
+      className="h-full w-full bg-gradient-to-t from-[#c9ffac] to-white pt-15 dark:from-[#111111] dark:to-[#0a0a0a]"
       data-aos="fade-up"
       data-aos-duration="1000"
     >
@@ -32,7 +32,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="mx-auto mt-12 max-w-screen-lg">
+      <section className="mx-auto mt-12 max-w-screen-lg pb-20">
         <div className="mx-auto flex max-w-[45rem] flex-col justify-center gap-4 px-5 md:flex-row">
           <Link to="/message-me">
             <Button className="w-full rounded-4xl border border-gray-900 bg-black px-4 py-5 text-sm font-bold text-white transition-all duration-100 ease-in hover:border-gray-900 hover:bg-gray-900 focus:border-black focus:ring-black focus:outline-none md:w-[10rem]">

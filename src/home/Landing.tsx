@@ -1,11 +1,12 @@
+import Skills from "@/components/shared/Skills";
 import Hero from "./Hero";
-import Navbar from "./Navbar";
+import About from "./About";
 
 export default function Landing() {
   return (
     <div>
-      <Navbar />
       <Hero />
+      <About />
     </div>
   );
 }
