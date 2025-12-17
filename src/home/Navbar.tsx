@@ -22,7 +22,7 @@ const navigationLinks = [
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 pe-4 backdrop-blur-lg md:px-6 dark:bg-[#0a0a0a]/80">
-      <div className="mx-auto flex h-16 max-w-screen-lg justify-between">
+      <div className="mx-auto flex h-16 max-w-5xl justify-between">
         {/* Left side */}
         <div
           className="flex items-center"
@@ -57,7 +57,7 @@ export default function Navbar() {
                   >
                     <path
                       d="M4 12L20 12"
-                      className="origin-center -translate-y-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-x-0 group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[315deg]"
+                      className="origin-center -translate-y-1.75 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-x-0 group-aria-expanded:translate-y-0 group-aria-expanded:rotate-315"
                     />
                     <path
                       d="M4 12H20"
@@ -65,7 +65,7 @@ export default function Navbar() {
                     />
                     <path
                       d="M4 12H20"
-                      className="origin-center translate-y-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-y-0 group-aria-expanded:rotate-[135deg]"
+                      className="origin-center translate-y-1.75 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-aria-expanded:translate-y-0 group-aria-expanded:rotate-135"
                     />
                   </svg>
                 </Button>
